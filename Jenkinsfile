@@ -3,7 +3,7 @@ def workspace;
 node('slave4') {
     stage('Checkout the source code') {
         echo "Hello Ravindran"
-        checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ravir1981/SampleProject.git']])
+        checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ravir1981/spring-boot-app.git']])
         workspace=pwd()
     }
     stage('Print Environment Variables') {
